@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EmailVerification">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/header_email_verification"
+        android:textStyle="bold"
+        android:textColor="@color/Darkslateblue"
+        android:textSize="16sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_below="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="Email Id"
+                android:textColor="@color/Darkslateblue"/>-->
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textColorHint="@color/DarkGray"
+                android:textColor="@color/White"
+                android:inputType="textEmailAddress"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/verify_button"
+                android:layout_below="@+id/forgot_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VERIFY"
+                android:backgroundTint="@color/Cadetblue"
+                android:padding="20dp"
+                android:layout_marginTop="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/lowerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/first_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="First Name"
+                        android:textColorHint="@color/DarkGray"
+                        android:textColor="@color/White"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/last_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Last Name"
+                        android:textColorHint="@color/DarkGray"
+                        android:textColor="@color/White"
+                        android:inputType="text"
+                        android:padding="16dp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/contact_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:textColorHint="@color/DarkGray"
+                    android:textColor="@color/White"
+                    android:inputType="phone"
+                    android:padding="16dp"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:textColorHint="@color/DarkGray"
+                    android:textColor="@color/White"
+                    android:inputType="textPassword"
+                    android:padding="16dp"
+                    android:layout_marginTop="15dp"/>
+
+                <EditText
+                    android:id="@+id/confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm Password"
+                    android:textColorHint="@color/DarkGray"
+                    android:textColor="@color/White"
+                    android:inputType="textPassword"
+                    android:padding="16dp"
+                    android:layout_marginTop="15dp"/>
+
+                <Button
+                    android:id="@+id/registration_button"
+                    android:layout_below="@+id/forgot_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="REGISTRATION"
+                    android:backgroundTint="@color/Cadetblue"
+                    android:padding="20dp"
+                    android:layout_marginTop="15dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

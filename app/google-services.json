@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "633507430072",
+    "firebase_url": "https://notifycheck-53d0f.firebaseio.com",
+    "project_id": "notifycheck-53d0f",
+    "storage_bucket": "notifycheck-53d0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633507430072:android:c67892a094e4d299",
+        "android_client_info": {
+          "package_name": "com.icajobguarantee.ica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633507430072-p9ssisn1atpdmuh8b98lja4rmn7lirp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsZV9M068O2EiOeFWQLBTuwwnGiC7ecHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633507430072-p9ssisn1atpdmuh8b98lja4rmn7lirp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launch_screen_bg1"
+    tools:context=".AcademicReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header_block"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:background="@color/HeaderBg">
+
+            <ImageView
+                android:id="@+id/back_press"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left_black"/>
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Academic Details"
+                android:textSize="20sp"
+                android:textColor="@color/White"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/HeaderBg"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/details_block"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="MODULE STATUS"
+                android:textSize="12sp"
+                android:textColor="@color/White"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:padding="10dp"
+                android:background="@drawable/border_bottom_bgray"/>
+
+            <TextView
+                android:id="@+id/report_block"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="MARKS"
+                android:textSize="12sp"
+                android:textColor="@color/White"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/attendance_block"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="ATTENDANCE"
+                android:textSize="12sp"
+                android:textColor="@color/White"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/details_res_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/circle_background_red"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Pending"
+                        android:textSize="14sp"
+                        android:textColor="@color/Textcolor"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/circle_background_yellow"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Running"
+                        android:textSize="14sp"
+                        android:textColor="@color/Textcolor"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/circle_background_green"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Completed"
+                        android:textSize="14sp"
+                        android:textColor="@color/Textcolor"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/academic_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:divider="@color/Trans"
+                android:dividerHeight="0.5dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/report_res_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/academic_list_ano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:divider="@color/Trans"
+                android:dividerHeight="0.5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attent_res_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/academic_alist_ano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:divider="@color/Trans"
+                android:dividerHeight="0.5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

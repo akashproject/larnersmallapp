@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shadow"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/coursename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/Textcolor"
+            android:text="Course Name"/>
+
+        <TextView
+            android:id="@+id/batchst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/Textcolor"
+            android:text="Batch Start Date"/>
+
+        <TextView
+            android:id="@+id/batchen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/Textcolor"
+            android:text="Batch End Date"/>
+
+        <TextView
+            android:id="@+id/modulestatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/Textcolor"
+            android:text="Module Status"/>
+
+        <TextView
+            android:id="@+id/coursemarksper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/Textcolor"
+            android:text="Marks Percantage"/>
+
+        <TextView
+            android:id="@+id/courseattendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/Textcolor"
+            android:text="Attendance"/>
+
+        <TextView
+            android:id="@+id/courcepass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/Textcolor"
+            android:text="Course Pass/Fail"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launch_screen_bg1"
+    tools:context=".RankDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header_block"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:padding="10dp"
+            android:background="@color/HeaderBg">
+
+            <ImageView
+                android:id="@+id/back_press"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_left_black"/>
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_toRightOf="@+id/back_press"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="My Awards"
+                android:textSize="20sp"
+                android:textColor="@color/White"/>
+
+            <TextView
+                android:id="@+id/go_to_share"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:text="Share"
+                android:textSize="16sp"
+                android:textColor="@color/White"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="35dp">
+
+            <ListView
+                android:id="@+id/result_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/Lavender"
+                android:dividerHeight="1dp"
+                android:scrollbars="none"
+                android:orientation="vertical"
+                android:fadingEdge="none"></ListView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Powered by ICA EDU SKILLS PVT LTD"
+                android:textSize="12sp"
+                android:textAlignment="viewEnd"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        -->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="2">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/go_to_share"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="SHARE"-->
+<!--                android:textColor="@color/White"-->
+<!--                android:textSize="14sp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@color/HeaderBg"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/go_to_back"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="BACK"-->
+<!--                android:textColor="@color/Textcolor"-->
+<!--                android:textSize="14sp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@color/LightGray"/>-->
+
+<!--        </LinearLayout>-->
+<!--    </RelativeLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

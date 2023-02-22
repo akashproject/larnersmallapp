@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_courses"
+            android:icon="@drawable/ic_course_24dp"
+            android:title="Courses" />
+        <item
+            android:id="@+id/nav_exam"
+            android:icon="@drawable/ic_exam_24dp"
+            android:title="Exam" />
+        <item
+            android:id="@+id/nav_competition"
+            android:icon="@drawable/ic_competition"
+            android:title="Competition" />
+        <item
+            android:id="@+id/nav_report_card"
+            android:icon="@drawable/ic_report_24dp"
+            android:title="Report Card" />
+        <item
+            android:id="@+id/nav_college"
+            android:icon="@drawable/ic_portrait_24dp"
+            android:title="Academic Details" />
+        <item
+            android:id="@+id/nav_rank_his"
+            android:icon="@drawable/ic_trophy_icon"
+            android:title="My Rank" />
+    </group>
+
+    <item android:title="About">
+        <menu>
+            <item
+                android:id="@+id/nav_terms_condition"
+                android:icon="@drawable/ic_terms_24dp"
+                android:title="Terms &amp; Conditions" />
+            <item
+                android:id="@+id/nav_privacy"
+                android:icon="@drawable/ic_privacy_policy_24dp"
+                android:title="Privacy Policy" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help_24dp"
+                android:title="Help" />
+            <item
+                android:id="@+id/nav_rate_us"
+                android:icon="@drawable/ic_rate_review"
+                android:title="Rate Us" />
+            <item
+                android:id="@+id/nav_version"
+                android:icon="@drawable/ic_done_circle_24dp"
+                android:title="Version (3.7)" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout_24dp"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/remote_pdf_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="56dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header_block"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:background="@color/HeaderBg">
+
+            <ImageView
+                android:id="@+id/back_press"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_left_black"/>
+
+            <ImageView
+                android:id="@+id/home_press"
+                android:layout_toRightOf="@+id/back_press"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_home_24dp"
+                android:layout_marginLeft="15dp"
+                app:tint="@color/White" />
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_toRightOf="@+id/home_press"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:text="@string/title_course_details"
+                android:textSize="20sp"
+                android:textColor="@color/White"
+                android:gravity="center"/>
+
+            <Spinner
+                android:id="@+id/spinner_font"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/editbox_border"
+                android:spinnerMode="dropdown"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            <ImageView
+                android:id="@+id/spinner_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_drop_down"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/imageLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:orientation="vertical">
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/main_image"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="180dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:adjustViewBounds="true"-->
+<!--                            android:visibility="gone"/>-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/item_videoIcon"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:src="@drawable/vdo_icon"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:onClick="videoTapped"-->
+<!--                            android:visibility="gone"/>-->
+
+                        <LinearLayout
+                            android:id="@+id/layVideo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <fragment
+                                android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+                                android:id="@+id/youtube_fragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:ignore="Instantiatable" />
+<!--                            <com.google.android.youtube.player.YouTubePlayerView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:id="@+id/youtube_fragment"-->
+<!--                                app:layout_constraintTop_toTopOf="parent"/>-->
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/vidoblock1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <VideoView
+                                android:id="@+id/videoView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/vidoblock2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <fragment
+                                android:name="com.vdocipher.aegis.player.VdoPlayerSupportFragment"
+                                android:id="@+id/vdo_player_fragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:keepScreenOn="true" />
+                        </LinearLayout>
+
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/buffering_textview"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:text="Buffering..."-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textColor="@android:color/white"-->
+<!--                            android:background="@color/Black"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:gravity="center"/>-->
+
+                        <ImageButton
+                            android:id="@+id/stretch_video"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/Trans"
+                            android:src="@drawable/ic_fullscreen"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+<!--                        <hb.xvideoplayer.MxVideoPlayerWidget-->
+<!--                            android:id="@+id/mpw_video_player"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content" />-->
+
+                    </RelativeLayout>
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/pdfView"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="480dp"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<es.voghdev.pdfviewpager.library.PDFViewPager-->
+                            <!--android:id="@+id/pdfViewPager"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="480dp"/>-->
+
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/assesment_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/course_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/course_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/Textcolor"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"/>
+
+                        <TextView
+                            android:id="@+id/course_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/Dimgrey"
+                            android:textStyle="italic"
+                            android:layout_marginBottom="10dp"/>
+
+                        <com.github.chrisbanes.photoview.PhotoView
+                            android:id="@+id/course_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="10dp"/>
+
+                        <TextView
+                            android:id="@+id/course_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/Dimgrey"
+                            android:layout_marginBottom="10dp"/>
+
+                        <Button
+                            android:id="@+id/start_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/BttonColor"
+                            android:text="G O  F O R  A S S E S S M E N T"
+                            android:textSize="14sp"
+                            android:textColor="@color/White"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"/>
+
+                        <!--<WebView-->
+                            <!--android:id="@+id/course_webview"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="300dp"-->
+                            <!--tools:ignore="WebViewLayout" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="Comments"-->
+                            <!--android:textStyle="bold"-->
+                            <!--android:textSize="14sp"-->
+                            <!--android:textColor="@color/HeaderBg"-->
+                            <!--android:layout_marginBottom="10dp"/>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@drawable/comments_box"-->
+                            <!--android:padding="10dp"-->
+                            <!--android:layout_marginBottom="10dp"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/comment_text"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="Than you for your attention @sujit"-->
+                                <!--android:textSize="12sp"-->
+                                <!--android:textColor="@color/Textcolor"/>-->
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginTop="5dp"-->
+                                <!--android:orientation="horizontal">-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/comment_by"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="Samir Majumder,"-->
+                                    <!--android:textSize="12sp"-->
+                                    <!--android:textStyle="bold"-->
+                                    <!--android:layout_marginRight="10dp"-->
+                                    <!--android:textColor="@color/Dimgrey"/>-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/comment_on"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="Posted On 2019-07-18 16:36:26"-->
+                                    <!--android:textStyle="italic"-->
+                                    <!--android:textSize="12sp"-->
+                                    <!--android:textColor="@color/Dimgrey"/>-->
+
+                            <!--</LinearLayout>-->
+
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@drawable/comments_box"-->
+                            <!--android:padding="10dp"-->
+                            <!--android:layout_marginBottom="10dp"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/comment_text1"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="Good instruction, thank you."-->
+                                <!--android:textSize="12sp"-->
+                                <!--android:textColor="@color/Textcolor"/>-->
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginTop="5dp"-->
+                                <!--android:orientation="horizontal">-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/comment_by1"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="Sujit Paul,"-->
+                                    <!--android:textSize="12sp"-->
+                                    <!--android:textStyle="bold"-->
+                                    <!--android:layout_marginRight="10dp"-->
+                                    <!--android:textColor="@color/Dimgrey"/>-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/comment_on1"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="Posted On 2019-07-18 14:16:26"-->
+                                    <!--android:textStyle="italic"-->
+                                    <!--android:textSize="12sp"-->
+                                    <!--android:textColor="@color/Dimgrey"/>-->
+
+                            <!--</LinearLayout>-->
+
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="10dp"-->
+                            <!--android:layout_marginBottom="10dp"-->
+                            <!--android:orientation="vertical">-->
+
+                           <!--<EditText-->
+                               <!--android:id="@+id/comment_edit_text"-->
+                               <!--android:layout_width="match_parent"-->
+                               <!--android:layout_height="90dp"-->
+                               <!--android:padding="10dp"-->
+                               <!--android:inputType="textMultiLine"-->
+                               <!--android:background="@drawable/editbox_border_blue"-->
+                               <!--android:gravity="top"-->
+                               <!--android:hint="Comments"-->
+                               <!--android:textSize="12sp"-->
+                               <!--android:textColor="@color/Textcolor"/>-->
+
+                            <!--<Button-->
+                                <!--android:id="@+id/post_button"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="POST"-->
+                                <!--android:textColor="@color/LightGray"-->
+                                <!--android:background="@drawable/rounded_button"-->
+                                <!--android:layout_gravity="right"-->
+                                <!--android:padding="10dp"-->
+                                <!--android:layout_marginTop="10dp"/>-->
+
+                        <!--</LinearLayout>-->
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/button_layout"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:weightSum="2">-->
+
+                        <!--<Button-->
+                            <!--android:id="@+id/prev_button"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@color/Trans"-->
+                            <!--android:text="P R E V I O U S"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:padding="18dp"/>-->
+
+                        <!--<Button-->
+                            <!--android:id="@+id/next_button"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="@color/Trans"-->
+                            <!--android:text="N E X T"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:padding="18dp"/>-->
+
+                    <!--</LinearLayout>-->
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone"></WebView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+<!--    <android.support.design.widget.BottomNavigationView-->
+<!--        android:id="@+id/navigationView"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="56dp"-->
+<!--        android:layout_marginEnd="0dp"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:background="@color/Trans"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:itemBackground="@color/Trans"-->
+<!--        app:menu="@menu/navigation"/>-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="@color/Trans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:itemBackground="@color/Trans"
+        app:menu="@menu/navigation"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

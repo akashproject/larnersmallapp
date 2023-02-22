@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Learnersmall</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_myaccount">My Account</string>
+    <string name="action_report_card">Report Card</string>
+    <string name="action_logout">Logout</string>
+
+
+    <string name="title_activity_launch">Learnersmall</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Learnersmall</string>
+    <string name="nav_header_anotitle">Powered by ICA Edu Skills Pvt. Ltd.</string>
+    <string name="nav_header_subtitle">crm@icagroup.in</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_branch_select">BranchSelect</string>
+    <string name="header_select_branch">Select your branch. If you do not know your branch please contact your Learnersmall administration</string>
+    <string name="header_email_verification">Email Verification (Please put your email, to verify for registered email id)</string>
+    <string name="header_registration">Sign Up</string>
+
+    <string name="title_course_select">Course Selection</string>
+    <string name="title_course_add">Add More Courses</string>
+    <string name="title_course_details">Topics</string>
+
+    <string name="title_activity_subject">Subject / Module</string>
+    <string name="title_activity_chapter">Chapter</string>
+    <string name="title_activity_topics">Topics</string>
+    <string name="title_activity_examlist">Exam List</string>
+    <string name="title_activity_exam">Exam</string>
+    <string name="title_activity_aexam">ASSESMENT Exam</string>
+    <string name="title_activity_result">Results &amp; Paper Analysis</string>
+    <string name="title_activity_progress">Your Progress</string>
+
+    <string name="title_activity_terms">Terms &amp; Conditions</string>
+    <string name="title_activity_privacy">Privacy Policy</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_version">Version</string>
+
+    <string name="otp_vry_text">OTP has been sent to your registered email id and mobile number</string>
+
+    <string name="dash">-</string>
+
+    <string name="description">Media Controls</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="fcm_message">FCM Message</string>
+    <string name="default_notification_channel_name" translatable="true"></string>
+    <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
+
+    <string name="title_activity_competition">Competition</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_image_upload">Image Upload</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="title_activity_prof_det">Academic Details</string>
+    <string name="title_academic_report">Academic Report</string>
+
+    <string name="title_report">Report Card</string>
+
+    <string name="title_activity_award">Your Award</string>
+
+    <string name="title_activity_rank">Rank History</string>
+    <string name="title_activity_yrank">My Award</string>
+
+    <string name="title_activity_ctagging">Course Taggign</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+</resources>

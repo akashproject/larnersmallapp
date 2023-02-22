@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shadow"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:id="@+id/left_panel"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/coursename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/Textcolor"
+                android:text="Course Name"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/right_panel"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_weight="9"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/circle_red"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/circle_background_red"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/circle_green"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/circle_background_green"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/circle_yellow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/circle_background_yellow"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
